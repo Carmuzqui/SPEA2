@@ -88,8 +88,8 @@ python Python-MH-SPEA-2_tutorial.py
 python Python-MH-SPEA-2.py
 
 
-Validação da Implementação
-Conformidade com o Tutorial
+# Validação da Implementação
+Conformidade com o tutorial
 Seção 4.1: Raw fitness R(i) implementado corretamente
 Seção 4.2: Densidade D(i) conforme especificação
 Algoritmo 1: Seleção ambiental completa

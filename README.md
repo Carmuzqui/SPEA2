@@ -84,7 +84,7 @@ Execução
 # Executar versão fiel ao tutorial
 python Python-MH-SPEA-2_tutorial.py
 
-# Executar implementação base do repositório de Valdecy Pereira
+# Executar versão do repositório de Valdecy Pereira
 python Python-MH-SPEA-2.py
 
 

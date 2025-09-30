@@ -462,7 +462,7 @@
 
 
 ############################################################################
-# SPEA2 (Strength Pareto Evolutionary Algorithm 2) - Implementação Correta
+# SPEA2 (Strength Pareto Evolutionary Algorithm 2) - Implementação tutorial
 # Baseado no código original, mas com implementação real do SPEA2
 # Formato idêntico para comparação direta
 ############################################################################
@@ -514,7 +514,7 @@ def strength_values_function(population, number_of_functions=2):
                     strength[i,0] = strength[i,0] + 1
     return strength
 
-# Function: Raw Fitness (R) - SPEA2 CORRETO
+# Function: Raw Fitness (R) - SPEA2 tutorial
 def raw_fitness_function(population, strength, number_of_functions=2):    
     raw_fitness = np.zeros((population.shape[0], 1))
     for i in range(0, population.shape[0]):
@@ -531,7 +531,7 @@ def euclidean_distance(x, y):
         distance = (x[j] - y[j])**2 + distance   
     return distance**(1/2) 
 
-# Function: Density (D) - SPEA2 CORRETO
+# Function: Density (D) - SPEA2 tutorial
 def density_calculation(population, number_of_functions=2, k=1):
     density = np.zeros((population.shape[0], 1))
     distance = np.zeros((population.shape[0], population.shape[0]))
@@ -713,8 +713,8 @@ def mutation(offspring, mutation_rate=0.1, eta=1, min_values=[-5,-5], max_values
             offspring[i,-k] = list_of_functions[-k](offspring[i,0:offspring.shape[1]-len(list_of_functions)])
     return offspring 
 
-# SPEA-2 Function - IMPLEMENTAÇÃO CORRETA
-def strength_pareto_evolutionary_algorithm_2(population_size=5, archive_size=5, mutation_rate=0.1, min_values=[-5,-5], max_values=[5,5], list_of_functions=[func_1, func_2], generations=50, mu=1, eta=1):        
+# SPEA-2 Function - IMPLEMENTAÇÃO tutorial
+def strength_pareto_evolutionary_algorithm_2(population_size=5, archive_size=5, mutation_rate=0.1, min_values=[-5,-5], max_values=[5,5], list_of_functions=[func_1, func_2], generations=5, mu=1, eta=1):        
     count = 0   
     population = initial_population(population_size=population_size, min_values=min_values, max_values=max_values, list_of_functions=list_of_functions) 
     archive = np.zeros((archive_size, population.shape[1]))  # Arquivo inicial vazio
@@ -754,8 +754,8 @@ def schaffer_f2(variables_values=[0]):
     return y
 
 # Calling SPEA-2 Function
-print("=== Executando SPEA2 CORRETO - Função Schaffer ===")
-spea_2_schaffer = strength_pareto_evolutionary_algorithm_2(population_size=50, archive_size=50, mutation_rate=0.1, min_values=[-1000], max_values=[1000], list_of_functions=[schaffer_f1, schaffer_f2], generations=3, mu=1, eta=1)
+print("=== Executando SPEA2 - Função Schaffer ===")
+spea_2_schaffer = strength_pareto_evolutionary_algorithm_2(population_size=50, archive_size=50, mutation_rate=0.1, min_values=[-1000], max_values=[1000], list_of_functions=[schaffer_f1, schaffer_f2], generations=5, mu=1, eta=1)
 
 # Shaffer Pareto Front
 schaffer = np.zeros((200, 3))
@@ -774,10 +774,10 @@ func_2_values = spea_2_schaffer[:,-1]
 ax1 = plt.figure(figsize=(15,15)).add_subplot(111)
 plt.xlabel('Function 1', fontsize=12)
 plt.ylabel('Function 2', fontsize=12)
-ax1.scatter(func_1_values, func_2_values, c='red',   s=25, marker='o', label='SPEA-2 CORRETO')
+ax1.scatter(func_1_values, func_2_values, c='red',   s=25, marker='o', label='SPEA-2')
 ax1.scatter(schaffer_1,    schaffer_2,    c='black', s=2,  marker='s', label='Pareto Front')
 plt.legend(loc='upper right')
-plt.title('SPEA2 Correto - Função Schaffer')
+plt.title('SPEA2 - Função Schaffer')
 plt.show()
 
 ######################## Part 2 - Usage ####################################
@@ -800,8 +800,8 @@ def kursawe_f2(variables_values=[0, 0]):
     return f2
 
 # Calling SPEA-2 Function
-print("\n=== Executando SPEA2 CORRETO - Função Kursawe ===")
-spea_2_kursawe = strength_pareto_evolutionary_algorithm_2(population_size=50, archive_size=50, mutation_rate=0.1, min_values=[-5,-5], max_values=[5,5], list_of_functions=[kursawe_f1, kursawe_f2], generations=3, mu=1, eta=1)
+print("\n=== Executando SPEA2 - Função Kursawe ===")
+spea_2_kursawe = strength_pareto_evolutionary_algorithm_2(population_size=50, archive_size=50, mutation_rate=0.1, min_values=[-5,-5], max_values=[5,5], list_of_functions=[kursawe_f1, kursawe_f2], generations=5, mu=1, eta=1)
 
 # Graph Pareto Front Solutions
 func_1_values = spea_2_kursawe[:,-2]
@@ -809,9 +809,9 @@ func_2_values = spea_2_kursawe[:,-1]
 ax1 = plt.figure(figsize=(15,15)).add_subplot(111)
 plt.xlabel('Function 1', fontsize=12)
 plt.ylabel('Function 2', fontsize=12)
-ax1.scatter(func_1_values, func_2_values, c='red', s=25, marker='o', label='SPEA-2 CORRETO')
+ax1.scatter(func_1_values, func_2_values, c='red', s=25, marker='o', label='SPEA-2')
 plt.legend(loc='upper right')
-plt.title('SPEA2 Correto - Função Kursawe')
+plt.title('SPEA2 - Função Kursawe')
 plt.show()
 
-print("\n=== SPEA2 CORRETO CONCLUÍDO ===")
+print("\n=== SPEA2 CONCLUÍDO ===")

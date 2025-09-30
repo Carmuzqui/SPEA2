@@ -19,7 +19,7 @@ Repositório base
 Pereira, V. (2018). Project: Metaheuristic-SPEA-2, GitHub repository: 
 
 
-# Objetivo do Projeto
+# Objetivo do projeto
 
 Este projeto surge da necessidade de verificar e corrigir a implementação do repositório base para que corresponda fielmente ao algoritmo SPEA2 descrito no tutorial original. Mantivemos a mesma interface, funções e estrutura do código de referência, mas corrigimos os aspectos algorítmicos que não correspondiam ao SPEA2 real.
 
@@ -50,7 +50,7 @@ Truncamento por distância: Remove soluções com menor distância ao vizinho ma
 
 Lógica consistente: Soluções não-dominadas sempre têm R(i) = 0
 
-## Estrutura do Repositório
+## Estrutura do repositório
 
 ├── original/                          # Código do repositório base (referência)
 
@@ -80,9 +80,9 @@ Lógica consistente: Soluções não-dominadas sempre têm R(i) = 0
 
 Mantivemos 100% de compatibilidade com a interface original, incluindo mesma assinatura da função principal, mesmas funções de teste (schaffer_f1, schaffer_f2, kursawe_f1, kursawe_f2) e mesmo formato de saída.
 
-### Parâmetros Idênticos
+### Parâmetros idênticos
 
-Parâmetro	Descrição	Valor Padrão	Compatibilidade
+Parâmetro	Descrição	Valor padrão	Compatibilidade
 
 population_size	Tamanho da população	50	Idêntico
 
@@ -108,7 +108,7 @@ Variáveis: 1 (x ∈ [-1000, 1000])
 
 Objetivos: f₁(x) = x², f₂(x) = (x-2)²
 
-Uso: Validação com frente de Pareto conhecido
+Uso: Validação com frente de pareto conhecido
 
 2. Função de Kursawe
 Variáveis: 2 (x₁, x₂ ∈ [-5, 5])
@@ -147,17 +147,17 @@ Algoritmo 2: Truncamento por distância implementado
 
 Seção 5: Operadores genéticos mantidos do código base
 
-Resultados Experimentais
+### Resultados experimentais
 
-Métrica	Implementação Base	Implementação Tutorial	Melhoria
+Métrica	Implementação repositório base	Implementação tutorial	Melhoria
 
-Convergência (Schaffer)	2.45 ± 0.8	0.89 ± 0.2	63.7%
+Convergência (Schaffer)	Ex: 2.45 ± 0.8	0.89 ± 0.2	63.7%
 
-Diversidade (Schaffer)	0.67 ± 0.2	1.45 ± 0.1	116%
+Diversidade (Schaffer)	
 
-Convergência (Kursawe)	3.21 ± 1.1	1.67 ± 0.4	48.0%
+Convergência (Kursawe)	
 
-Diversidade (Kursawe)	0.89 ± 0.3	1.78 ± 0.2	100%
+Diversidade (Kursawe)	
 
 # Dependências
 numpy>=1.21.0

@@ -755,7 +755,7 @@ def schaffer_f2(variables_values=[0]):
 
 # Calling SPEA-2 Function
 print("=== Executando SPEA2 - Função Schaffer ===")
-spea_2_schaffer = strength_pareto_evolutionary_algorithm_2(population_size=50, archive_size=50, mutation_rate=0.1, min_values=[-1000], max_values=[1000], list_of_functions=[schaffer_f1, schaffer_f2], generations=5, mu=1, eta=1)
+spea_2_schaffer = strength_pareto_evolutionary_algorithm_2(population_size=50, archive_size=50, mutation_rate=0.1, min_values=[-1000], max_values=[1000], list_of_functions=[schaffer_f1, schaffer_f2], generations=100, mu=1, eta=1)
 
 # Shaffer Pareto Front
 schaffer = np.zeros((200, 3))
@@ -801,7 +801,7 @@ def kursawe_f2(variables_values=[0, 0]):
 
 # Calling SPEA-2 Function
 print("\n=== Executando SPEA2 - Função Kursawe ===")
-spea_2_kursawe = strength_pareto_evolutionary_algorithm_2(population_size=50, archive_size=50, mutation_rate=0.1, min_values=[-5,-5], max_values=[5,5], list_of_functions=[kursawe_f1, kursawe_f2], generations=5, mu=1, eta=1)
+spea_2_kursawe = strength_pareto_evolutionary_algorithm_2(population_size=50, archive_size=50, mutation_rate=0.1, min_values=[-5,-5], max_values=[5,5], list_of_functions=[kursawe_f1, kursawe_f2], generations=100, mu=1, eta=1)
 
 # Graph Pareto Front Solutions
 func_1_values = spea_2_kursawe[:,-2]

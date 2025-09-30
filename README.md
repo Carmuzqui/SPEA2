@@ -1,5 +1,5 @@
 # SPEA2
-SPEA2 (Strength Pareto Evolutionary Algorithm 2) - Implementação Correta Baseada no Tutorial Original
+SPEA2 (Strength Pareto Evolutionary Algorithm 2) - Implementação baseada no tutorial Zitzler, E., Laumanns, M., & Thiele, L. (2001). SPEA2: Improving the strength Pareto evolutionary algorithm. TIK-report, 103.
 
 Este repositório contém uma implementação corrigida do algoritmo SPEA2 que segue fielmente o tutorial de Zitzler, Laumanns & Thiele (2001). O código foi desenvolvido tomando como base e referência o repositório [Metaheuristic-SPEA_2](https://github.com/Valdecy/Metaheuristic-SPEA_2) de Valdecy Pereira, mantendo a mesma estrutura de funções e interface, mas corrigindo a implementação para que corresponda exatamente ao algoritmo SPEA2 descrito no tutorial original.
 
@@ -74,13 +74,13 @@ Lógica consistente: Soluções não-dominadas sempre têm R(i) = 0
 
     └── tutorial_compliance_analysis.md
 
-Compatibilidade com o código base do repositório
+## Compatibilidade com o código base do repositório
 
-Interface mantida
+### Interface mantida
 
 Mantivemos 100% de compatibilidade com a interface original, incluindo mesma assinatura da função principal, mesmas funções de teste (schaffer_f1, schaffer_f2, kursawe_f1, kursawe_f2) e mesmo formato de saída.
 
-## Parâmetros Idênticos
+### Parâmetros Idênticos
 
 Parâmetro	Descrição	Valor Padrão	Compatibilidade
 
@@ -100,15 +100,21 @@ min_values	Valores mínimos das variáveis	[-5,-5]	Idêntico
 
 max_values	Valores máximos das variáveis	[5,5]	Idêntico
 
-Funções de teste (Mantidas do Original)
+Funções de teste (mantidas do original)
 
 1. Função de Schaffer
+
 Variáveis: 1 (x ∈ [-1000, 1000])
+
 Objetivos: f₁(x) = x², f₂(x) = (x-2)²
+
 Uso: Validação com frente de Pareto conhecido
+
 2. Função de Kursawe
 Variáveis: 2 (x₁, x₂ ∈ [-5, 5])
+
 Objetivos: f₁ = -10·exp(-0.2·√(x₁² + x₂²)), f₂ = |x₁|^0.8 + 5·sin(x₁³) + |x₂|^0.8 + 5·sin(x₂³)
+
 Uso: Teste com problema multimodal complexo
 
 # Instalação e uso
@@ -119,12 +125,12 @@ git clone https://github.com/Carmuzqui/SPEA2.git
 
 pip install -r requirements.txt
 
-Execução
+## Execução
 
-## Executar versão fiel ao tutorial
+### Executar versão fiel ao tutorial
 python Python-MH-SPEA-2_tutorial.py
 
-## Executar versão do repositório de Valdecy Pereira
+### Executar versão do repositório de Valdecy Pereira
 python Python-MH-SPEA-2.py
 
 

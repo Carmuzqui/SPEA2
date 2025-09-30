@@ -192,7 +192,7 @@ def schaffer_f2(variables_values = [0]):
     return y
 
 # Calling SPEA-2 Function
-spea_2_schaffer = strength_pareto_evolutionary_algorithm_2(population_size = 50, archive_size = 50, mutation_rate = 0.1, min_values = [-1000], max_values = [1000], list_of_functions = [schaffer_f1, schaffer_f2], generations = 100, mu = 1, eta = 1)
+spea_2_schaffer = strength_pareto_evolutionary_algorithm_2(population_size = 50, archive_size = 50, mutation_rate = 0.1, min_values = [-1000], max_values = [1000], list_of_functions = [schaffer_f1, schaffer_f2], generations = 3, mu = 1, eta = 1)
 
 # Shaffer Pareto Front
 schaffer = np.zeros((200, 3))
@@ -236,7 +236,7 @@ def kursawe_f2(variables_values = [0, 0]):
     return f2
 
 # Calling SPEA-2 Function
-spea_2_kursawe = strength_pareto_evolutionary_algorithm_2(population_size = 50, archive_size = 50, mutation_rate = 0.1, min_values = [-5,-5], max_values = [5,5], list_of_functions = [kursawe_f1, kursawe_f2], generations = 100, mu = 1, eta = 1)
+spea_2_kursawe = strength_pareto_evolutionary_algorithm_2(population_size = 50, archive_size = 50, mutation_rate = 0.1, min_values = [-5,-5], max_values = [5,5], list_of_functions = [kursawe_f1, kursawe_f2], generations = 3, mu = 1, eta = 1)
 
 # Kursawe Pareto Front
 kursawe = np.zeros((10000, 4))

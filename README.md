@@ -88,7 +88,7 @@ python Python-MH-SPEA-2_tutorial.py
 python Python-MH-SPEA-2.py
 
 
-# Validação da Implementação
+# Validação da implementação
 Conformidade com o tutorial
 Seção 4.1: Raw fitness R(i) implementado corretamente
 Seção 4.2: Densidade D(i) conforme especificação
@@ -102,48 +102,19 @@ Diversidade (Schaffer)	0.67 ± 0.2	1.45 ± 0.1	116%
 Convergência (Kursawe)	3.21 ± 1.1	1.67 ± 0.4	48.0%
 Diversidade (Kursawe)	0.89 ± 0.3	1.78 ± 0.2	100%
 
-Dependências
+# Dependências
 numpy>=1.21.0
 matplotlib>=3.5.0
 random2>=1.0.1
-Contribuições
-Contribuições são bem-vindas! Por favor:
 
-Fork o repositório
-Crie uma branch para sua feature
-Commit suas mudanças
-Push para a branch
-Abra um Pull Request
-
-Agradecimentos
+# Agradecimentos
 Valdecy Pereira: Pelo código base e estrutura de referência que permitiu esta implementação
 Zitzler, Laumanns & Thiele: Pelo tutorial claro e detalhado do SPEA2
 Claude 4 Sonnet: Pela assistência na análise algorítmica e identificação de discrepâncias
 Comunidade de Otimização Multiobjetivo: Por manter os padrões de qualidade
 Citação
-Se usar este código em pesquisa acadêmica, por favor cite tanto o trabalho original quanto esta implementação:
 
-bibtex
-Copiar
-
-@misc{munoz2024spea2tutorial,
-  author = {Carlos J. Muñoz Quiroga},
-  title = {SPEA2-Comparison: Tutorial-Compliant Implementation Based on Valdecy Pereira's Framework},
-  year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/Carmuzqui/SPEA2},
-  note = {Based on Valdecy Pereira's Metaheuristic-SPEA_2 repository}
-}
-
-@misc{pereira2018spea2,
-  author = {Valdecy Pereira},
-  title = {Project: Metaheuristic-SPEA-2},
-  year = {2018},
-  publisher = {GitHub},
-  url = {https://github.com/Valdecy/Metaheuristic-SPEA_2}
-}
-
-Licença
+# Licença
 Este projeto está sob a licença MIT, mantendo compatibilidade com o projeto base.
 
 Nota: Este projeto foi desenvolvido com propósito educacional, demonstrando a importância de verificar implementações contra especificações originais. Agradecemos ao Prof. Valdecy Pereira pela base sólida que permitiu esta análise e melhoria.
